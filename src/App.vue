@@ -1,31 +1,51 @@
 <script>
+import Header from 'sections/Header'
+import Footer from 'sections/Footer'
+import Home from 'pages/Home'
+import ContactMe from 'pages/ContactMe'
+import Gallery from 'pages/Gallery'
+import NotFound from 'pages/NotFound'
+
   export default{
     // component options
     // reactive state defined here
+    
+    const routes = {
+      '/' : Home,
+      '/contact-me': ContactMe,
+      '/gallery': Gallery,
+      '/404': NotFound
+    }
+    
     data(){
       return {
-        title: "Art Gallery",
-        heading: "Welcome to my website!",
-        description: "Hey all. Welcome welcome! 🤗 Trying to see if i can set up a web based gallery for all my digital artworks",
-        copyright: "All rights reserved ©️ AninaRJ  2025"
+        currentPath: window.location.hash
       }
+    },
+    computed:{
+      currentView() {
+        return routes[this.currentPath.slice(1) || '/'] || NotFound
+      }
+    },
+    mounted:{
+      window.addEventListener('hashchange', function(){
+        this.currentPath = window.location.hash
+      })
     }
   }
 </script>
 
 <template>
-<title>
-  {{title}}
-</title>
-<header>
-  {{heading}}
-  <p>
-    <!--Tab to edit-->
-    {{description}}
-  </p>
-</header>
-
-<footer>
-  {{copyright}}
-</footer>
+  <Header>
+  </Header>
+  
+  <nav>
+    <a href="#/">Home</a> |
+    <a href="#/gallery">Gallery</a> |
+    <a href="#/contact-me">Contact Me</a>
+  <component :is="currentView" />
+  </nav>
+  
+  <Footer>
+  </Footer>
 </template>
