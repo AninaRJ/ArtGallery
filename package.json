@@ -1,0 +1,9 @@
+{
+  "name": "ArtGallery",
+  "description": "A simple Vue app that displays a basic artist's gallery - their work, posts and contact",
+  "author": "Ranjani Shivashankar",
+  "year": "finally 2025",
+  "dependencies": {
+    "vue": "latest"
+  }
+}
