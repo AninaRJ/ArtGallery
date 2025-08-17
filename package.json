@@ -3,11 +3,17 @@
   "description": "A simple Vue app that displays a basic artist's gallery - their work, posts and contact",
   "author": "Ranjani Shivashankar",
   "year": "finally 2025",
-  "dependencies": {
-    "vue": "latest"
-  },
   "scripts": {
-    "build": "npm run build",
-    "start": "npm run start"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0"
   }
 }
