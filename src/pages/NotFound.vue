@@ -1,7 +1,8 @@
 <template>
-  <!--Tab to edit-->
-  <div>
+  <section>
+    <div>
     <!--Tab to edit-->
-    Page not found
-  </div>
+      Oops! Page not found
+    </div>
+  </section>
 </template>
