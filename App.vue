@@ -1,10 +1,10 @@
 <script>
-import Header from 'src/sections/Header'
-import Footer from 'src/sections/Footer'
-import Home from 'src/pages/Home'
-import ContactMe from 'src/pages/ContactMe'
-import Gallery from 'src/pages/Gallery'
-import NotFound from 'src/pages/NotFound'
+import Header from './src/sections/Header'
+import Footer from './src/sections/Footer'
+import Home from './src/pages/Home'
+import ContactMe from './src/pages/ContactMe'
+import Gallery from './src/pages/Gallery'
+import NotFound from './src/pages/NotFound'
 
   export default{
     // component options
