@@ -38,7 +38,7 @@ import NotFound from './src/pages/NotFound.vue'
 <template>
   <Header>
   </Header>
-  
+  App vue
   <nav>
     <a href="#/">Home</a> |
     <a href="#/gallery">Gallery</a> |
