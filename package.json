@@ -3,6 +3,9 @@
   "description": "A simple Vue app that displays a basic artist's gallery - their work, posts and contact",
   "author": "Ranjani Shivashankar",
   "year": "finally 2025",
+  "main": "src/main.js",
+  "version": "1.0.0",
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"
