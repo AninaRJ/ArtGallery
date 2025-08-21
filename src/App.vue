@@ -1,22 +1,22 @@
 <script>
-  import Header from './src/sections/Header.vue'
-  import Footer from './src/sections/Footer.vue'
-  import Home from './src/pages/Home.vue'
-  import ContactMe from './src/pages/ContactMe.vue'
-  import Gallery from './src/pages/Gallery.vue'
-  import NotFound from './src/pages/NotFound.vue'
+  import Header from './sections/Header.vue'
+  import Footer from './sections/Footer.vue'
+  import Home from './pages/Home.vue'
+  import ContactMe from './pages/ContactMe.vue'
+  import Gallery from './pages/Gallery.vue'
+  import NotFound from './pages/NotFound.vue'
   
+  const routes = {
+    '/': Home,
+    '/contact-me': ContactMe,
+    '/gallery': Gallery,
+    '/404': NotFound
+  }
+
   export default {
     // component options
     // reactive state defined here
-    
-    const routes = {
-      '/': Home,
-      '/contact-me': ContactMe,
-      '/gallery': Gallery,
-      '/404': NotFound
-    }
-    
+
     data() {
       return {
         currentPath: window.location.hash
@@ -27,8 +27,8 @@
         return routes[this.currentPath.slice(1) || '/'] || NotFound
       }
     },
-    mounted: {
-      window.addEventListener('hashchange', function() {
+    mounted() {
+      window.addEventListener('hashchange', () => {
         this.currentPath = window.location.hash
       })
     }
